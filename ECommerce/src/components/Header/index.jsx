@@ -1,19 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Logo from '../../assets/images/logo.svg'
 import { Link } from 'react-router-dom';
-
 import { FaRegCircleUser } from "react-icons/fa6";
 import { IoBagOutline } from "react-icons/io5";
-
-
-
-
 import CountryDropdown from '../CountryDropdown';
 import { Button } from '@mui/material';
 import SearchBox from './SearchBox';
 import Navigation from './Navigation';
+import { MyContext } from '../../App';
 
 const Header = () => {
+  const context = useContext(MyContext)
   return (
     <>
       <div className='headerWrapper'>
@@ -34,7 +31,10 @@ const Header = () => {
 
               <div className='col-sm-10 d-flex align-items-center part2'>
 
-                <CountryDropdown />
+                {
+                  context.countryList.length !== 0 && <CountryDropdown />
+                }
+
 
                 {/* Header Search Start Here */}
                 <SearchBox />
@@ -65,7 +65,7 @@ const Header = () => {
 
 
         {/* below code started for navbar design */}
-        <Navigation/>
+        <Navigation />
         {/* here code finished  for navbar design */}
 
       </div>
