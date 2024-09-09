@@ -1,17 +1,22 @@
 import React from 'react'
 import HomeBanner from '../../components/HomeBanner';
 import banner1 from "../../assets/images/banner1.png"
-import { Button } from '@mui/material';
+import { Button, Rating } from '@mui/material';
 import { MdArrowRightAlt } from "react-icons/md";
 import Slider from "react-slick";
+
+import ProductItem from '../../components/ProductItem';
+
 
 const Home = () => {
   var productSliderOptions = {
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 4,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    arrows: true,
+    autoplay:true
   };
   return (
     <>
@@ -36,12 +41,14 @@ const Home = () => {
                 <Button className='viewAllBtn ml-auto' >View all <MdArrowRightAlt /></Button>
               </div>
 
-              <div className='product_row'>
+              <div className='product_row w-100 mt-4'>
                 <Slider {...productSliderOptions}>
-                  <div className='item'>
-                    w
-                    9
-                  </div>
+                  <ProductItem/>
+                  <ProductItem/>
+                  <ProductItem/>
+                  <ProductItem/>
+                  <ProductItem/>
+                  <ProductItem/>
                 </Slider>
               </div>
 

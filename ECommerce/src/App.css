@@ -144,3 +144,28 @@ nav .navPart2 ul li:hover .submenu {opacity: 1; visibility: inherit; top: 100%;}
 .productRow .hd{ font-size: 25px; font-weight: 600;}
 .viewAllBtn{ padding: 5px 25px !important; background: #fff; border: 1px solid rgba(0, 0, 0, 0.1) !important; border-radius: 30px !important; color: #767373 !important; font-weight: 600; text-transform: capitalize !important;}
 .viewAllBtn svg{ font-size: 20px;}
+.productItem {width: 100%; height: auto; border: 1px solid rgba(0, 0, 0, 0.1); cursor: pointer; position: relative;}
+.productItem .badge {display: inline-block; padding: 7px 10px; position: absolute; top: 10px; left: 10px;}
+.productItem .actions { position: absolute; top: 20px; right: -10%; z-index: -100; display: flex; flex-direction: column; gap: 10px; transition: all 0.3s ease-in-out;}
+
+.productItem .actions button{ display: flex;  align-items: center; justify-content: center; min-width: 40px !important; height: 40px !important; width: 40px !important; border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 50% !important; background: #fff; box-shadow: 0 1px 3px rgb(0 0 0 / 12% ), 0 1px 2px rgb(0 0 0 / 24%) !important; transition: all 0.0s !important;}
+
+.productItem .actions button svg {color: #000 !important; opacity: 0.8; pointer-events: none; font-size: 20px}
+
+.productItem .actions button:hover { background: #233a95 !important;}
+.productItem .actions button:hover svg {color: #fff !important;}
+.productItem .imgWrapper {overflow: hidden;}
+.productItem .imgWrapper:hover .actions {opacity: 1; right: 10px; z-index: 100;}
+
+
+
+.productItem .info{ padding: 15px;}
+.productItem .info h4 {font-size: 15px; font-weight: 600;}
+
+.productItem .info .oldPrice{ font-size: 14px; font-weight: bold; color: rgba(0, 0, 0, 0.2); text-decoration: line-through;}
+.productItem .info .netPrice{ font-size: 16px; font-weight: bold;}
+.product_row .slick-arrow {position: absolute; top: 45%; z-index: 100; display: flex; align-items: center; justify-content: center; width: 30px !important; height: 30px !important; background: #f7ad18; border-radius: 100%; font-weight: bold; }
+.product_row .slick-arrow.slick-next {right: -15px;} 
+.product_row .slick-arrow.slick-prev {left: -15px;} 
+.product_row .slick-arrow.slick-next::before {font-family: FontAwesome !important; color: #fff; font-size: 18px;}
+.product_row .slick-arrow.slick-prev::before {font-family: FontAwesome !important; color: #fff; font-size: 18px;}
